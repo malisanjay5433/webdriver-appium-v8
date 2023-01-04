@@ -9,13 +9,3 @@ describe("CLARK-NATIVE APP AUTOMATION", () => {
     console.log("User would like to check more info..");
   });
 });
-
-// get acceptCookies() {
-//     //     return $('//android.widget.Button[@text=" Alle Cookies akzeptieren"]');
-//     //   }
-//     //   get rejectCookies() {
-//     //     return $('//android.widget.Button[@text=" Ablehnen"]');
-//     //   }
-//     //   get moreInformation() {
-//     //     return $('//android.widget.Button[@text=" Mehr Informationen"]');
-//     //   }

@@ -130,7 +130,7 @@ export const config = {
         args: {
           address: "localhost",
           port: 4723,
-          relaxedSecurity: true,
+          // relaxedSecurity: true,
         },
         logPath: "./",
       },
