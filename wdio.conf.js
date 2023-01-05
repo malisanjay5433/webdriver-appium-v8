@@ -55,25 +55,12 @@ export const config = {
   //
   capabilities: [
     {
-      // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-      // grid with only 5 firefox instances available you can make sure that not more than
-      // 5 instances get started at a time.
-      //   maxInstances: 5,
-      //   //
-      //   browserName: "chrome",
-      //   acceptInsecureCerts: true,
-      // If outputDir is provided WebdriverIO can capture driver session logs
-      // it is possible to configure which logTypes to include/exclude.
-      // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-      // excludeDriverLogs: ['bugreport', 'server'],
-
       "appium:platformName": "android",
       "appium:deviceName": "emulator-5554",
       "appium:automationName": "UiAutomator2",
-      "appium:app":
-        "/Users/sanjay/Documents/Automation/appium-webdriver01/webdriver-appium-v8/app/android/app-DE-debug.apk",
-      //   path.join(process.cwd(), "./app/android/app-DE-debug.apk"),
-      //    "app/android/app-DE-debug.apk",
+      "appium:app": "./app/android/app-DE-debug.apk",
+      "appium:autoGrantPermissions": true,
+      "appium:appWaitActivity": "*",
     },
   ],
   //
@@ -130,7 +117,7 @@ export const config = {
         args: {
           address: "localhost",
           port: 4723,
-          // relaxedSecurity: true,
+          relaxedSecurity: true,
         },
         logPath: "./",
       },
@@ -164,7 +151,8 @@ export const config = {
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: "bdd",
-    timeout: 60000,
+    // timeout: 60000,
+    timeout: 1010000,
   },
   //
   // =====
